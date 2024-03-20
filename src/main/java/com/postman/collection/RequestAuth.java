@@ -129,8 +129,11 @@ public class RequestAuth extends CollectionElement {
     public enumAuthType getAuthType() {
 
         switch (type) {
-            case "apikey", "bearer": {
+            case "apikey": {
                 return enumAuthType.APIKEY;
+            }
+            case "bearer" : {
+                return enumAuthType.BEARER;
             }
             case "digest": {
                 return enumAuthType.DIGEST;
